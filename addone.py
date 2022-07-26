@@ -30,26 +30,19 @@ class Solution:
         # return type: list
 
         # TODO: Write code below to return a list "ary" with the solution to the prompt
-        if len(ary) >1:
-            for i in range(len(ary)):
-                if ary[-i] != 9:
-                    ary[-i] +=1 
-                else:
-                    ary[-i-1] += 1
-                    ary[-i] =0
-            return ary
-        elif len(ary) == 1:
-            if ary[-1] != 9:
-                ary[-1] += 1 
-                return ary
-            else:
-                ary.clear()
-                ary.append(1,0)
-                return ary
-
-
-
-
+        
+        length = len(ary) -1
+        
+        while ary[length] == 9:
+            ary[length] = 0
+            length -= 1
+        
+        if ary < 0:
+            ary = [1] +ary
+        else:
+            ary[length] +=1 
+        
+        
 
         
         
