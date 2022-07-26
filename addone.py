@@ -31,17 +31,14 @@ class Solution:
 
         # TODO: Write code below to return a list "ary" with the solution to the prompt
         
-        length = len(ary) -1
-        
-        while ary[length] == 9:
-            ary[length] = 0
-            length -= 1
-        
-        if len(ary) > 0:
+        length = len(ary)-1
+        while(ary[length]==9):
+            ary[length]=0
+            length-=1
+        if length < 0:
             ary = [1] + ary
         else:
-            ary[length] += 1 
-        
+            ary[length]+=1
         
         return ary
 
