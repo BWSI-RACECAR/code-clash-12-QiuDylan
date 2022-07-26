@@ -40,7 +40,7 @@ class Solution:
         if ary[length] > 0:
             ary = [1] + ary
         else:
-            ary[length] -= 1 
+            ary[-length] += 1 
         
         
 
