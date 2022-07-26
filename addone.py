@@ -37,7 +37,7 @@ class Solution:
             ary[length] = 0
             length -= 1
         
-        if ary[length] < 0:
+        if ary[length] > 0:
             ary = [1] +ary
         else:
             ary[length] +=1 
