@@ -30,15 +30,22 @@ class Solution:
         # return type: list
 
         # TODO: Write code below to return a list "ary" with the solution to the prompt
-
-        if ary[-1] != 9:
-            ary[-1] += 1 
-            return ary 
-        else:
-            ary[-2] += 1 
-            ary[-1] = 0
-            return ary 
-
+        if len(ary) >1:
+            if ary[-1] != 9:
+                ary[-1] += 1 
+                return ary 
+            else:
+                ary[-2] += 1 
+                ary[-1] = 0
+                return ary 
+        elif len(ary) == 1:
+            if ary[-1] != 9:
+                ary[-1] += 1 
+                return ary
+            else:
+                ary.clear()
+                ary.append(1,0)
+                return ary
 
 
 
