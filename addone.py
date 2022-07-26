@@ -34,10 +34,34 @@ class Solution:
             if ary[-1] != 9:
                 ary[-1] += 1 
                 return ary 
-            else:
+            elif ary[-2] !=9:
                 ary[-2] += 1 
                 ary[-1] = 0
                 return ary 
+            elif ary[-3] !=9:
+                ary[-3] += 1 
+                ary[-2] = 0
+                return ary
+            elif ary[-4] !=9:
+                ary[-4] += 1 
+                ary[-3] = 0
+                return ary
+            elif ary[-5] !=9:
+                ary[-5] += 1 
+                ary[-4] = 0
+                return ary
+            elif ary[-6] !=9:
+                ary[-6] += 1 
+                ary[-5] = 0
+                return ary
+            elif ary[-7] !=9:
+                ary[-7] += 1 
+                ary[-6] = 0
+                return ary
+            elif ary[-8] !=9:
+                ary[-8] += 1 
+                ary[-9] = 0
+                return ary
         elif len(ary) == 1:
             if ary[-1] != 9:
                 ary[-1] += 1 
